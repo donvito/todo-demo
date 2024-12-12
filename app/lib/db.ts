@@ -1,8 +1,8 @@
 import sqlite3 from 'sqlite3'
-import { open } from 'sqlite'
+import { open, Database } from 'sqlite'
 
 // This ensures we only create one database connection
-let db: any = null;
+let db: Database | null = null;
 
 export async function getDb() {
     if (!db) {
